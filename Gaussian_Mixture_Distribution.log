@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2019.9.4)  2 NOV 2019 21:49
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2019.9.4)  3 NOV 2019 00:55
 entering extended mode
 **G:/GalaxiesWork/MA263-gaussian-mixture-distribution/Gaussian_Mixture_Distribu
 tion.tex
@@ -816,7 +816,49 @@ File: fig/fig3.jpg Graphic file (type jpg)
 <use fig/fig3.jpg>
 Package pdftex.def Info: fig/fig3.jpg used on input line 227.
 (pdftex.def)             Requested size: 202.35622pt x 151.76366pt.
- [5 <G:/GalaxiesWork/MA263-gaussian-mixture-distribution/fig/fig3.jpg>] [6] 
+ [5 <G:/GalaxiesWork/MA263-gaussian-mixture-distribution/fig/fig3.jpg>] (G:\Gal
+axiesWork\MA263-gaussian-mixture-distribution\GM_gen_u.m)
+[6] <fig/fig4.jpg, id=136, 702.625pt x 526.96875pt>
+File: fig/fig4.jpg Graphic file (type jpg)
+ <use fig/fig4.jpg>
+Package pdftex.def Info: fig/fig4.jpg used on input line 242.
+(pdftex.def)             Requested size: 202.35622pt x 151.76366pt.
+
+<fig/fig5-1.jpg, id=137, 702.625pt x 526.96875pt>
+File: fig/fig5-1.jpg Graphic file (type jpg)
+ <use fig/fig5-1.jpg>
+Package pdftex.def Info: fig/fig5-1.jpg used on input line 252.
+(pdftex.def)             Requested size: 128.0374pt x 96.02425pt.
+
+<fig/fig5-2.jpg, id=138, 702.625pt x 526.96875pt>
+File: fig/fig5-2.jpg Graphic file (type jpg)
+ <use fig/fig5-2.jpg>
+Package pdftex.def Info: fig/fig5-2.jpg used on input line 256.
+(pdftex.def)             Requested size: 128.0374pt x 96.02425pt.
+
+<fig/fig5-3.jpg, id=139, 702.625pt x 526.96875pt>
+File: fig/fig5-3.jpg Graphic file (type jpg)
+ <use fig/fig5-3.jpg>
+Package pdftex.def Info: fig/fig5-3.jpg used on input line 260.
+(pdftex.def)             Requested size: 128.0374pt x 96.02425pt.
+
+<fig/fig5-4.jpg, id=140, 702.625pt x 526.96875pt>
+File: fig/fig5-4.jpg Graphic file (type jpg)
+ <use fig/fig5-4.jpg>
+Package pdftex.def Info: fig/fig5-4.jpg used on input line 264.
+(pdftex.def)             Requested size: 128.0374pt x 96.02425pt.
+
+<fig/fig5-5.jpg, id=141, 702.625pt x 526.96875pt>
+File: fig/fig5-5.jpg Graphic file (type jpg)
+ <use fig/fig5-5.jpg>
+Package pdftex.def Info: fig/fig5-5.jpg used on input line 268.
+(pdftex.def)             Requested size: 128.0374pt x 96.02425pt.
+ [7 <G:/GalaxiesWork/MA263-gaussian-mixture-distribution/fig/fig4.jpg> <G:/Gala
+xiesWork/MA263-gaussian-mixture-distribution/fig/fig5-1.jpg> <G:/GalaxiesWork/M
+A263-gaussian-mixture-distribution/fig/fig5-2.jpg> <G:/GalaxiesWork/MA263-gauss
+ian-mixture-distribution/fig/fig5-3.jpg> <G:/GalaxiesWork/MA263-gaussian-mixtur
+e-distribution/fig/fig5-4.jpg> <G:/GalaxiesWork/MA263-gaussian-mixture-distribu
+tion/fig/fig5-5.jpg>] 
 AED: lastpage setting LastPage
 
 (G:\GalaxiesWork\MA263-gaussian-mixture-distribution\Gaussian_Mixture_Distribut
@@ -827,64 +869,65 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 12745 strings out of 494045
- 198971 string characters out of 3153702
- 286517 words of memory out of 3000000
- 15685 multiletter control sequences out of 15000+200000
- 59132 words of font info for 201 fonts, out of 3000000 for 9000
+ 12826 strings out of 494045
+ 200360 string characters out of 3153702
+ 315533 words of memory out of 3000000
+ 15754 multiletter control sequences out of 15000+200000
+ 60090 words of font info for 204 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
- 36i,9n,42p,909b,1635s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 36i,9n,42p,909b,1636s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/s
-imkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simhei.ttf>{F:/CTEX/Mi
-KTeX/fonts/enc/dvips/fontname/8r.enc}<C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/F
-onts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/W
+imsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS
+/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simhei.ttf>{F:
+/CTEX/MiKTeX/fonts/enc/dvips/fontname/8r.enc}<C:/WINDOWS/Fonts/simsun.ttc><C:/W
 INDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.t
 tf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/
-simkai.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOW
-S/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C
-:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsu
+simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOW
+S/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C
+:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsu
 n.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fon
 ts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WIN
-DOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf
-><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/si
-msun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/
+DOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc
+><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/si
+mhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/
 Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/
 WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.
 ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts
 /simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDO
 WS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><
 C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/sims
-un.ttc><C:/WINDOWS/Fonts/simsun.ttc>{F:/CTEX/MiKTeX/fonts/enc/dvips/cm-super/cm
--super-ts1.enc}<C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WI
-NDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.tt
-f><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/s
+un.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fo
+nts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc>{F:/CTEX/MiKTeX/fonts/enc/dvips/cm-
+super/cm-super-ts1.enc}<C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.tt
+c><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/s
 imkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS
 /Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:
 /WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai
 .ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Font
 s/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WIND
-OWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf>
-<C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/sim
-hei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/F
-onts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/W
-INDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.t
-tf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><F:/CTEX/MiKTeX/fo
-nts/type1/public/amsfonts/cm/cmbx10.pfb><F:/CTEX/MiKTeX/fonts/type1/public/amsf
-onts/cm/cmbx12.pfb><F:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx7.pfb><F:
-/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><F:/CTEX/MiKTeX/fonts/ty
-pe1/public/amsfonts/cm/cmmi10.pfb><F:/CTEX/MiKTeX/fonts/type1/public/amsfonts/c
-m/cmmi5.pfb><F:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><F:/CTEX/M
-iKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><F:/CTEX/MiKTeX/fonts/type1/publ
-ic/amsfonts/cm/cmr12.pfb><F:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pf
-b><F:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><F:/CTEX/MiKTeX/fonts
-/type1/public/amsfonts/cm/cmsl10.pfb><F:/CTEX/MiKTeX/fonts/type1/public/amsfont
-s/cm/cmsy10.pfb><F:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><F:/CT
-EX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><F:/CTEX/MiKTeX/fonts/type1/
-public/amsfonts/cm/cmti10.pfb><F:/CTEX/MiKTeX/fonts/type1/public/cm-super/sfrm1
-000.pfb><F:/CTEX/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb>
-Output written on Gaussian_Mixture_Distribution.pdf (6 pages, 896482 bytes).
+OWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf>
+<C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/sim
+hei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/F
+onts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/W
+INDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.t
+tf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/
+simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><F:/CTEX/M
+iKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><F:/CTEX/MiKTeX/fonts/type1/pub
+lic/amsfonts/cm/cmbx12.pfb><F:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx7
+.pfb><F:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><F:/CTEX/MiKTeX/
+fonts/type1/public/amsfonts/cm/cmmi10.pfb><F:/CTEX/MiKTeX/fonts/type1/public/am
+sfonts/cm/cmmi5.pfb><F:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><F
+:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><F:/CTEX/MiKTeX/fonts/ty
+pe1/public/amsfonts/cm/cmr12.pfb><F:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm
+/cmr5.pfb><F:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><F:/CTEX/MiKT
+eX/fonts/type1/public/amsfonts/cm/cmsl10.pfb><F:/CTEX/MiKTeX/fonts/type1/public
+/amsfonts/cm/cmsy10.pfb><F:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pf
+b><F:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><F:/CTEX/MiKTeX/font
+s/type1/public/amsfonts/cm/cmti10.pfb><F:/CTEX/MiKTeX/fonts/type1/public/cm-sup
+er/sfrm1000.pfb><F:/CTEX/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb>
+Output written on Gaussian_Mixture_Distribution.pdf (7 pages, 1159686 bytes).
 PDF statistics:
- 467 PDF objects out of 1000 (max. 8388607)
+ 490 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 71 words of extra memory for PDF output out of 10000 (max. 10000000)
 

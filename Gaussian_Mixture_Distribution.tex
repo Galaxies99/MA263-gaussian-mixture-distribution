@@ -64,7 +64,7 @@ $P$ & $1 - p$ & $p$ \\
 自己设定参数，用计算机生成 1000 组，每组 $n$ 个混合高斯分布的随机数，设第 $i$ 组的随机数为 $Z_{i, 1}, Z_{i, 2}, ..., Z_{i, n}$，且给出
 
 \begin{equation}
-    U_i = \frac{\sum_{j=1}^n{Z_{i, j}} - n \cdot E(Z_i)}{\sqrt{n \cdot D(Z_i)}}
+    U_i = \frac{\sum_{j=1}^n{Z_{i, j}} - n \cdot E(Z)}{\sqrt{n \cdot D(Z)}}
     \label{eq1}
 \end{equation}
 
@@ -136,7 +136,7 @@ $P$ & $1 - p$ & $p$ \\
 
 下面我们简要说明一下这个算法的正确性：首先，由于在混合高斯分布中，$X, Y, \eta$ 三个随机变量相互独立，因此可以独立生成；其次，按照算法流程，生成的随机变量$X, Y$ 可以满足 $X \sim N(\mu_1, \sigma_1), Y \sim N(\mu_2, \sigma_2)$；然后，我们先生成了一个 $(0, 1)$ 内均匀分布的随机变量 $\eta'$ ，那么，由随机分布的分布函数知，$P(\eta' \leq p) = F_{\eta'}(p) = p, P(\eta' > p) = 1 - P(\eta' \leq p) = 1 - p$，因此按照算法 \ref{algo2} 所述规则生成的随机变量 $\eta$ 满足表 \ref{tab1} 所示的分布列，从而生成的随机数 $Z = X + \eta Y$ 服从参数为 $\mu_1, \sigma_1; \mu_2, \sigma_2; p$ 的高斯混合分布。
 
-由于 Matlab 中内置了生成正态分布和平均分布的函数，因此我们可以利用 Matlab 非常方便的实现算法 \ref{algo2}，代码如下：
+由于 Matlab 中内置了生成正态分布和平均分布的函数，因此我们可以利用 Matlab 非常方便的实现算法 \ref{algo2}，代码 “GM\_gen.m” 如下：
 
 \lstinputlisting{GM_gen.m}
 
@@ -200,7 +200,7 @@ $P$ & $1 - p$ & $p$ \\
 \begin{conclusion}
 若图像有两个峰，参数 $p$ 决定了两个峰的高度变化关系，当 $p$ 增大时，$\mu_1$ 峰的高度降低，$\mu_1 + \mu_2$ 峰的高度增高。
 \label{con2}
-\end{conclusion} 
+\end{conclusion}
 
 由于图像的峰对应着概率密度函数的极大值，因此我们可以将结论 \ref{con1}, \ref{con2} 表述如下：
 
@@ -229,6 +229,48 @@ $P$ & $1 - p$ & $p$ \\
 \end{figure}
 
 \section{问题二的解答}
+
+在问题二中，我们选用参数 $\mu_1 = 0, \sigma_1 = 2; \mu_2 = 10, \sigma_2 = 3; p = 0.6$。利用 Matlab，按照第三节的方法可以生成服从混合高斯分布的矩阵，再对每行计算 $U_i$，代码“GM\_gen\_U.m” 如下：
+
+\lstinputlisting{GM_gen_u.m}
+
+首先我们解释一下为什么选用了如上参数。由问题一的讨论我们知道，在问题二中，选择的参数应该能够尽可能反映出混合高斯分布的特点，即 $Z$ 的频率分布直方图可以出现两个“峰”。因此我们选用了一系列参数，并用问题一的代码生成了 10000 个随机数存储在 data 文件夹下的 data4.csv 文件中，并画出了 $Z$ 的频率分布直方图如图 \ref{fig4} 所示。
+
+\begin{figure}[H]
+  \centering
+  % Requires \usepackage{graphicx}
+  \includegraphics[width=2.8in]{fig/fig4.jpg}\\
+  \caption{参数为 $\mu_1 = 0, \sigma_1 = 2; \mu_2 = 10, \sigma_2 = 3; p = 0.6$ 的高斯混合分布的随机数频率分布直方图}\label{fig4}
+\end{figure}
+
+对于问题二，我们分别选取了$n = 10, n = 20, n = 50, n = 100$ 和 $n = 1000$ 进行生成并计算，得到的数据全部存储在 data 文件夹下的 data5-1.csv, data5-2.csv, ..., data5-5.csv 中，并画出$U_i$ 的频率分布直方图如图 \ref{fig5} 所示。
+
+\begin{figure}[H]
+\centering
+\subfigure[$n = 10$]{
+\includegraphics[width=4.5cm]{fig/fig5-1.jpg}
+}
+\quad
+\subfigure[$n = 20$]{
+\includegraphics[width=4.5cm]{fig/fig5-2.jpg}
+}
+\quad
+\subfigure[$n = 50$]{
+\includegraphics[width=4.5cm]{fig/fig5-3.jpg}
+}
+\quad
+\subfigure[$n = 100$]{
+\includegraphics[width=4.5cm]{fig/fig5-4.jpg}
+}
+\quad
+\subfigure[$n = 1000$]{
+\includegraphics[width=4.5cm]{fig/fig5-5.jpg}
+}
+\caption{不同参数 $n$ 下 $U_i$ 的频率分布直方图}
+\label{fig5}
+\end{figure}
+
+我们似乎并不能从中看出峰之间的明显的差距。
 
 \begin{thebibliography}{1}
 \bibitem{bib1}
