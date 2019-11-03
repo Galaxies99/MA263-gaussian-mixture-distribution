@@ -13,20 +13,20 @@
 \usepackage[superscript]{cite}
 \usepackage{geometry}
 \usepackage{bm}
-\newtheorem{definition}{\hspace{2em}定义}
-\newtheorem{theorem}{\hspace{2em}定理}
-\newtheorem{lemma}{\hspace{2em}引理}
-\newtheorem{proof}{\hspace{2em}证明}
-\newtheorem{algorithm}{\hspace{2em}算法}
-\newtheorem{conclusion}{\hspace{2em}结论}
+\newtheorem{definition}{\hspace{2em}定义}[section]
+\newtheorem{theorem}{\hspace{2em}定理}[section]
+\newtheorem{lemma}{\hspace{2em}引理}[section]
+\newtheorem{proof}{\hspace{2em}证明}[section]
+\newtheorem{algorithm}{\hspace{2em}算法}[section]
+\newtheorem{conclusion}{\hspace{2em}结论}[section]
 
 \newcommand*{\dif}{\mathop{}\!\mathrm{d}}
 \geometry{left=3cm,right=3cm,top=1.5cm,bottom=1.5cm}
 
 \begin{document}
-\title{\textbf{混合高斯分布}}
+\title{\textbf{关于混合高斯分布的相关问题的讨论}}
 \author{518030910150 方泓杰}
-\date{Nov. 2nd, 2019}
+\date{Nov. 3rd, 2019}
 \maketitle
 
 \section{问题简述}
@@ -75,7 +75,7 @@ $P$ & $1 - p$ & $p$ \\
 \end{itemize}
 
 
-\section{关于混合高斯分布的简单讨论}
+\section{关于混合高斯分布的初步讨论}
 
 我们首先讨论混合高斯分布的分布函数以及概率密度函数，来大致了解一下混合高斯分布的一些基本性质以及规律。
 
@@ -149,7 +149,7 @@ $P$ & $1 - p$ & $p$ \\
   \caption{参数为 $\mu_1 = 0, \sigma_1 = 2; \mu_2 = 10, \sigma_2 = 5; p = 0.6$ 的高斯混合分布的随机数频率分布直方图}\label{fig1}
 \end{figure}
 
-\subsection{讨论参数对于混合高斯分布的影响}
+\subsection{关于各参数对于混合高斯分布的影响的讨论}
 
 从式\eqref{eq4}中的密度函数我们可以看出，混合高斯分布的密度函数实际上是两个正态分布密度函数的加权平均，其中权重分别为 $p$ 和 $(1-p)$；因此权重 $p$ 对于混合高斯分布的影响非常重要，因此我们先来讨论参数 $p$ 对于混合高斯分布的影响。
 
@@ -230,9 +230,11 @@ $P$ & $1 - p$ & $p$ \\
 
 \section{问题二的解答}
 
-在问题二中，我们选用参数 $\mu_1 = 0, \sigma_1 = 2; \mu_2 = 10, \sigma_2 = 3; p = 0.6$。利用 Matlab，按照第三节的方法可以生成服从混合高斯分布的矩阵，再对每行计算 $U_i$，代码“GM\_gen\_U.m” 如下：
+\subsection{初次尝试}
 
-\lstinputlisting{GM_gen_u.m}
+在问题二中，我们初步选用参数 $\mu_1 = 0, \sigma_1 = 2; \mu_2 = 10, \sigma_2 = 3; p = 0.6$。利用 Matlab，按照第三节的方法可以生成服从混合高斯分布的矩阵，再对每行计算 $U_i$，代码“GM\_gen\_U\_try1.m” 如下：
+
+\lstinputlisting{GM_gen_U_try1.m}
 
 首先我们解释一下为什么选用了如上参数。由问题一的讨论我们知道，在问题二中，选择的参数应该能够尽可能反映出混合高斯分布的特点，即 $Z$ 的频率分布直方图可以出现两个“峰”。因此我们选用了一系列参数，并用问题一的代码生成了 10000 个随机数存储在 data 文件夹下的 data4.csv 文件中，并画出了 $Z$ 的频率分布直方图如图 \ref{fig4} 所示。
 
@@ -243,7 +245,7 @@ $P$ & $1 - p$ & $p$ \\
   \caption{参数为 $\mu_1 = 0, \sigma_1 = 2; \mu_2 = 10, \sigma_2 = 3; p = 0.6$ 的高斯混合分布的随机数频率分布直方图}\label{fig4}
 \end{figure}
 
-对于问题二，我们分别选取了$n = 10, n = 20, n = 50, n = 100$ 和 $n = 1000$ 进行生成并计算，得到的数据全部存储在 data 文件夹下的 data5-1.csv, data5-2.csv, ..., data5-5.csv 中，并画出$U_i$ 的频率分布直方图如图 \ref{fig5} 所示。
+对于问题二，我们用以上参数，分别选取了$n = 10, n = 20, n = 50, n = 100$ 和 $n = 1000$ 进行生成并计算，得到的数据全部存储在 data 文件夹下的 data5-1.csv, data5-2.csv, ..., data5-5.csv 中，并画出$U_i$ 的频率分布直方图如图 \ref{fig5} 所示。
 
 \begin{figure}[H]
 \centering
@@ -266,15 +268,133 @@ $P$ & $1 - p$ & $p$ \\
 \subfigure[$n = 1000$]{
 \includegraphics[width=4.5cm]{fig/fig5-5.jpg}
 }
-\caption{不同参数 $n$ 下 $U_i$ 的频率分布直方图}
+\caption{不同参数 $n$ 下 $U_i$ 的频率分布直方图（初次尝试）}
 \label{fig5}
 \end{figure}
 
-我们似乎并不能从中看出峰之间的明显的差距。
+我们似乎并不能从中看出峰之间的明显的差距，于是我们对参数做了一些调动。
+
+\subsection{再次尝试}
+
+经过初次尝试，我们发现参数选为 $\mu_1 = 0, \sigma_1 = 2; \mu_2 = 10, \sigma_2 = 3; p = 0.6$ 并不能很好的看出 $U_i$ 的频率分布直方图和 $n$ 的关系。经过多次尝试，我们发现，当两个峰的距离较远时，$n$ 的改变对于 $U_i$ 的频率分布直方图有着比较明显的影响。此次尝试，我们选取 $\mu_1 = 0, \sigma_1 = 2; \mu_2 = 500, \sigma_2 = 3; p = 0.6$，同样利用 Matlab 生成随机数并计算 $U_i$ 并统计频率分布直方图，代码如 “GM\_gen\_U.m” 所示，事实上仅需将 “GM\_gen\_U\_try1.m” 的第 7 行改为如下代码即可：
+
+\begin{lstlisting}[language=Matlab]
+    mu1 = 0; sigma1 = 2; mu2 = 500; sigma2 = 3; p = 0.6;
+\end{lstlisting}
+
+对于问题二，我们用以上参数，分别选取了$n = 10, n = 20, n = 50, n = 100$ 和 $n = 1000$ 进行生成并计算，得到的数据全部存储在 data 文件夹下的 data6-1.csv, data6-2.csv, ..., data6-5.csv 中，并画出$U_i$ 的频率分布直方图如图 \ref{fig6} 所示。
+
+\begin{figure}[H]
+\centering
+\subfigure[$n = 10$]{
+\includegraphics[width=4.5cm]{fig/fig6-1.jpg}
+}
+\quad
+\subfigure[$n = 20$]{
+\includegraphics[width=4.5cm]{fig/fig6-2.jpg}
+}
+\quad
+\subfigure[$n = 50$]{
+\includegraphics[width=4.5cm]{fig/fig6-3.jpg}
+}
+\quad
+\subfigure[$n = 100$]{
+\includegraphics[width=4.5cm]{fig/fig6-4.jpg}
+}
+\quad
+\subfigure[$n = 1000$]{
+\includegraphics[width=4.5cm]{fig/fig6-5.jpg}
+}
+\caption{不同参数 $n$ 下 $U_i$ 的频率分布直方图（再次尝试）}
+\label{fig6}
+\end{figure}
+
+这次，我们可以清晰的看出来 $n$ 对于 $U_i$ 的频率分布直方图的影响，我们将在 4.4 节进行进一步讨论。
+
+\subsection{关于混合高斯分布的进一步讨论}
+
+在第 2 节中我们初步讨论过混合高斯分布的一些性质，这里我们对混合高斯分布的数学期望和方差进行进一步的讨论。
+
+由混合高斯分布的定义，我们知道 $X, Y, \eta$ 互相独立，于是有
+
+\begin{equation}
+    E(Z) = E(X + \eta Y) = E(X) + E(\eta) E(Y) = \mu_1 + p \mu_2
+    \label{eq5}
+\end{equation}
+
+\begin{displaymath}
+	\begin{aligned}	 
+        E(Z^2) & = E(X^2 + 2 X \eta Y + \eta^2 Y^2) \\
+        & = E(X^2) + 2 E(X) E(Y) E(\eta) + E(\eta^2) E(Y^2) \\ 
+        & = (D(X) + E^2(X)) + 2E(X) E(Y) E(\eta) + E(\eta^2) (D(Y) + E^2(Y)) \\
+        & = (\sigma_1^2 + \mu_1^2) + 2p\mu_1\mu_2 + p (\sigma_2^2 + \mu_2^2)
+    \end{aligned}
+\end{displaymath}
+
+\begin{equation}
+    D(Z) = E(Z^2) - E^2(Z) = \sigma_1^2 + p \sigma_2^2 + p(1-p)\mu_2^2
+    \label{eq6}
+\end{equation}
+
+
+\subsection{关于参数 $n$ 对于 $U_i$ 的频率分布直方图的影响的讨论}
+
+通过图6 我们可以看出随机变量 $U_i$ 的频率分布直方图实际上是由一个一个“峰”组成的，而且“峰”与“峰”之间存在一定的间隔，当 $n$ 较小时比较明显。随着 $n$ 的增大，峰之间的间隔变小，且峰的高度均变低。对于相同的$n$，峰的高度随 $|U_i|$ 的增大而降低，最后趋近于0，在 $U_i = 0$ 附近峰的高度达到最大值。并且，随着 $n$ 的增大，$U_i$ 的分布近似于标准正态分布。
+
+我们不加证明的地给出下面的一个重要定理。
+
+\begin{theorem}[Lindeberg-L\'{e}vy中心极限定理]
+    设 ${X_n}$ 为独立的随机序列，且 $E(X_i) = \mu, D(X_i) = \sigma^2 > 0, (i = 1, 2, ...)$，记
+    \begin{displaymath}
+        Y_n^*=\frac{\sum_{k=1}^nX_k-n\mu}{\sigma\sqrt{n}}
+    \end{displaymath}
+    则对任意实数 $y$，有
+    \begin{displaymath}
+        \lim_{n\rightarrow \infty} P(Y_n^* \leq y) = \Phi(y)
+    \end{displaymath}
+    其中，$\Phi(y)$ 为标准正态分布的分布函数，因此即 $n \rightarrow \infty$ 时，$Y_n^* \sim N(0, 1)$。
+\end{theorem}
+
+根据定理2，当 $n$ 很大时候 $(n \geq 50)$，$\sum_{i=1}^n Z_i$ 的近似分布为正态分布\cite{bib2}，$U_i$ 的近似分布为标准正态分布。
+
+随着 $n$ 的增大，由于 $U_i$ 的分布逐渐接近 $N(0, 1)$，因此随着 $n$ 的增大，图像中“峰”之间的距离逐渐减小，最后趋近于0；且峰的高度逐渐减小，最后趋近于标准正态分布的概率密度函数值。对于相同的 $n$，由于其分布和标准正态分布的近似性，因此有峰的最大值在 $U_i = 0$ 附近，且峰的分布随着 $|U_i|$ 增大而降低，最后趋近于0。
+
+我们将上述现象总结为下面几个结论。
+
+\begin{conclusion}
+    $U_i$ 的频率分布直方图实际上是由一个一个“峰”组成的，而且“峰”与“峰”之间存在一定的间隔。随着 $n$ 的增大，峰之间的距离逐渐减小；当 $n \rightarrow \infty$ 时，峰之间距离趋近于 0。
+\end{conclusion}
+
+\begin{conclusion}
+    随着 $n$ 的增大，$U_i$ 分布逐渐近似于标准正态分布 $N(0, 1)$，故其的最大值出现在 $U_i = 0$ 附近，且$U_i$ 近似关于 $U_i = 0$ 对称分布。
+\end{conclusion}
+
+同时，由于初次尝试的失败，考虑两个不同参数的高斯分布的差异，我得出了如下结论。
+
+\begin{conclusion}
+    随着混合高斯分布的两个峰之间的距离的增大，在 $n$ 较小的情况下 $(n \leq 50)$，相邻峰之间的间隔逐渐增大。
+    \label{con_end}
+\end{conclusion}
+
+关于结论 \ref{con_end}，利用目前的知识并没有办法很好的阐述，在此略去说明过程。
+
+\section{总结与感想}
+
+本文主要讨论了混合高斯分布的一些性质，并给出了利用 Matlab 生成服从混合高斯分布的随机数的算法与具体实现；同时利用混合高斯分布讨论了 Lindeberg-L\'{e}vy 中心极限定理，得出了一些普遍的结论。通过本文的讨论，我对于混合高斯分布有了更加深刻的认识，并且熟悉了利用 Matlab 生成随机数辅助研究的方法，自学了关于中心极限定理的相关内容。总而言之，我获益颇丰。
+
+\section{致谢}
+
+感谢熊德文老师在概率统计课堂上的认真教学与对于本课题的启发性提示。
+
+感谢助教抽出时间认真阅读本文。
+
+感谢谢哲同学对于问题2中相关参数选取给予的帮助。
 
 \begin{thebibliography}{1}
 \bibitem{bib1}
 李曙雄,杨振海. 舍选法的几何解释及其应用[J]. 数理统计与管理(4):40-43.
+\bibitem{bib2}
+上海交通大学数学系.《概率论与数理统计》.上海交通大学出版社.2011
 \end{thebibliography}
 
 
